@@ -5,20 +5,40 @@
 
 <web-app>
 
-  <!-- Servlets -->
-  <servlet>
-    <servlet-name>greetServlet</servlet-name>
-    <servlet-class>com.mycompany.example.server.GreetingServiceImpl</servlet-class>
-  </servlet>
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>greetServlet</servlet-name>
+		<servlet-class>com.mycompany.example.server.GreetingServiceImpl</servlet-class>
+	</servlet>
 
-  <servlet-mapping>
-    <servlet-name>greetServlet</servlet-name>
-    <url-pattern>/MyGwtApp/greet</url-pattern>
-  </servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>greetServlet</servlet-name>
+		<url-pattern>/MyGwtApp/greet</url-pattern>
+	</servlet-mapping>
 
-  <!-- Default page to serve -->
-  <welcome-file-list>
-    <welcome-file>MyGwtApp.html</welcome-file>
-  </welcome-file-list>
+	<servlet>
+		<servlet-name>SampleUploadServlet</servlet-name>
+		<servlet-class>com.mycompany.example.server.SampeUploadServlet</servlet-class>
+		<init-param>
+			<param-name>maxSize</param-name>
+			<param-value>1024000</param-value>
+		</init-param>
+		<init-param>
+			<param-name>slowUploads</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>corsDomainsRegex</param-name>
+			<param-value>/upload/.*</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SampleUploadServlet</servlet-name>
+		<url-pattern>*.gupld</url-pattern>
+	</servlet-mapping>
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>MyGwtApp.html</welcome-file>
+	</welcome-file-list>
 
 </web-app>

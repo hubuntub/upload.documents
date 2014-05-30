@@ -9,7 +9,10 @@
   <inherits name='com.google.gwt.user.theme.standard.Standard'/>
   <!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
   <!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/>     -->
-
+  <!-- Include GWTUpload library -->
+  <inherits name="gwtupload.GWTUpload"/>
+  <!-- Load dinamically predefined styles in the library when the application starts -->
+  <stylesheet src="Upload.css"/>
   <!-- Other module inherits                                      -->
 
   <!-- Specify the app entry point class.                         -->
