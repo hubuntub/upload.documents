@@ -11,8 +11,10 @@
   <!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/>     -->
   <!-- Include GWTUpload library -->
   <inherits name="gwtupload.GWTUpload"/>
+  <inherits name="com.google.code.p.gwtchismes.GWTChismes"/>
+   <inherits name="jsupload.JsUploadLib"/>
   <!-- Load dinamically predefined styles in the library when the application starts -->
-  <stylesheet src="Upload.css"/>
+  <stylesheet src="../MyGwtApp.css"/>
   <!-- Other module inherits                                      -->
 
   <!-- Specify the app entry point class.                         -->

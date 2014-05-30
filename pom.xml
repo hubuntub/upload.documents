@@ -24,6 +24,10 @@
 		<maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
 		<maven-eclipse-plugin.version>2.8</maven-eclipse-plugin.version>
 		<maven-clean-plugin.version>2.4.1</maven-clean-plugin.version>
+		<gwtChismesVersion>0.9.7</gwtChismesVersion>
+		<gwtExporterVersion>2.4.0-M1</gwtExporterVersion>
+		<gwtIncubatorVersion>20101117-r1766</gwtIncubatorVersion>
+		<gwtuploadVersion>1.0.2-SNAPSHOT</gwtuploadVersion>
 	</properties>
 
 	<dependencies>
@@ -56,7 +60,7 @@
 		<dependency>
 			<groupId>com.googlecode.gwtupload</groupId>
 			<artifactId>gwtupload</artifactId>
-			<version>0.6.4</version>
+			<version>${gwtuploadVersion}</version>
 		</dependency>
 		<dependency>
 			<groupId>commons-codec</groupId>
@@ -72,6 +76,27 @@
 			<groupId>commons-fileupload</groupId>
 			<artifactId>commons-fileupload</artifactId>
 			<version>1.2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode.gwtupload</groupId>
+			<artifactId>jsupload</artifactId>
+			<version>${gwtuploadVersion}</version>
+		</dependency>
+		<dependency>
+			<groupId>gwtchismes</groupId>
+			<artifactId>gwtchismes</artifactId>
+			<version>0.9.8</version>
+		</dependency>
+		<dependency>
+			<groupId>org.timepedia.exporter</groupId>
+			<artifactId>gwtexporter</artifactId>
+			<version>${gwtExporterVersion}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-incubator</artifactId>
+			<version>2.0.1</version>
 		</dependency>
 
 		<!-- Test dependencies -->
@@ -241,6 +266,20 @@
 		<repository>
 			<id>gwtupload</id>
 			<url>http://gwtupload.googlecode.com/svn/mavenrepo/</url>
+		</repository>
+		<repository>
+			<id>gwtchismes</id>
+			<url>http://gwtchismes.googlecode.com/svn/mavenrepo/</url>
+		</repository>
+		<repository>
+			<id>sonatype-snapshots</id>
+			<url>http://oss.sonatype.org/content/repositories/snapshots</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
 		</repository>
 	</repositories>
 </project>
