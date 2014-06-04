@@ -16,11 +16,11 @@
 		<webapp.directory>${project.build.directory}/${project.build.finalName}</webapp.directory>
 
 		<!-- Dependencies versions -->
-		<gwt.version>2.6.1</gwt.version>
+		<gwt.version>2.6.0</gwt.version>
 		<junit.version>4.8.1</junit.version>
 
 		<!-- Plugin properties -->
-		<gwt-maven-plugin.version>2.6.1</gwt-maven-plugin.version>
+		<gwt-maven-plugin.version>2.6.0</gwt-maven-plugin.version>
 		<maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
 		<maven-eclipse-plugin.version>2.8</maven-eclipse-plugin.version>
 		<maven-clean-plugin.version>2.4.1</maven-clean-plugin.version>
@@ -98,6 +98,11 @@
 			<artifactId>gwt-incubator</artifactId>
 			<version>2.0.1</version>
 		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.vectomatic</groupId> -->
+<!-- 			<artifactId>lib-gwt-file</artifactId> -->
+<!-- 			<version>0.3.5</version> -->
+<!-- 		</dependency> -->
 
 		<!-- Test dependencies -->
 		<dependency>
@@ -162,7 +167,6 @@
 						<goals>
 							<goal>compile</goal>
 							<goal>test</goal>
-							<goal>generateAsync</goal>
 						</goals>
 					</execution>
 				</executions>
@@ -235,7 +239,6 @@
 											<goal>resources</goal>
 											<goal>compile</goal>
 											<goal>i18n</goal>
-											<goal>generateAsync</goal>
 										</goals>
 									</pluginExecutionFilter>
 									<action>
